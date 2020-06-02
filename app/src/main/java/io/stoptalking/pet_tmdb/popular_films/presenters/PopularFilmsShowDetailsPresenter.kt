@@ -24,7 +24,7 @@ interface PopularFilmsShowDetailsView : NetworkMvpView {
 class PopularFilmsShowDetailsPresenter(errorBehavior: ErrorBehavior<PopularFilmsShowDetailsView>,
                                        schedulerProvider : SchedulerProvider,
                                        subject: Subject<ShowDetailsDTO>) :
-    EventMutualPresenterImpl<PopularFilmsShowDetailsView, ShowDetailsDTO, ShowDetailsDTO>(
+    EventSimplePresenterImpl<PopularFilmsShowDetailsView, ShowDetailsDTO, ShowDetailsDTO>(
         POPULAR_FILMS_SHOW_DETAILS,
         errorBehavior,
         schedulerProvider,

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="film_details_margin_hor">20dp</dimen>
+    <dimen name="film_details_margin_bottom">20dp</dimen>
+
+    <dimen name="film_details_image_height">388dp</dimen>
+
+    <dimen name="film_details_rating_container_image_size">15dp</dimen>
+    <dimen name="film_details_rating_container_image_margin_start">5dp</dimen>
+
+    <dimen name="film_details_rating_margin_top">20dp</dimen>
+    <dimen name="film_details_rating_margin_start">8dp</dimen>
+
+    <dimen name="film_details_about_title_margin_top">20dp</dimen>
+    <dimen name="film_details_about_content_margin_top">4dp</dimen>
+
+</resources>

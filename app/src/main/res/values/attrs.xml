@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RatingView">
+        <attr name="maxRating" format="float"/>
+        <attr name="childCount" format="integer"/>
+        <attr name="childMargin" format="dimension"/>
+        <attr name="childSize" format="dimension"/>
+    </declare-styleable>
+
+</resources>

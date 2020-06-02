@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ItemPopularTitle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/blue_dark_0</item>
+    </style>
+
+    <style name="ItemPopularRating">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="ItemPopularDate">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/blue_light_0</item>
+    </style>
+
+    <style name="ItemPopularBtn">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+</resources>

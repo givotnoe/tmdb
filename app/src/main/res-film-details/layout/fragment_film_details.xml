@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/film_details_image"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/film_details_image_height"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <io.stoptalking.pet_tmdb._presentation.view.base.custom.RatingView
+            android:id="@+id/film_details_rating_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/film_details_margin_hor"
+            app:layout_constraintTop_toTopOf="@+id/film_details_rating"
+            app:layout_constraintBottom_toBottomOf="@+id/film_details_rating"
+            app:layout_constraintStart_toStartOf="parent"
+            app:maxRating="10"
+            app:childMargin="@dimen/film_details_rating_container_image_margin_start"
+            app:childSize="@dimen/film_details_rating_container_image_size"/>
+
+        <TextView
+            android:id="@+id/film_details_rating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/film_details_rating_margin_top"
+            android:layout_marginStart="@dimen/film_details_rating_margin_start"
+            android:layout_marginEnd="@dimen/film_details_margin_hor"
+            app:layout_constraintTop_toBottomOf="@+id/film_details_image"
+            app:layout_constraintStart_toEndOf="@+id/film_details_rating_container"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/film_details_about_title"
+            style="@style/FilmDetailsAboutTitle"
+            android:text="@string/film_details_about_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/film_details_about_title_margin_top"
+            android:layout_marginStart="@dimen/film_details_margin_hor"
+            android:layout_marginEnd="@dimen/film_details_margin_hor"
+            app:layout_constraintTop_toBottomOf="@+id/film_details_rating"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/film_details_about_content"
+            style="@style/FilmDetailsAboutContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/film_details_about_content_margin_top"
+            android:layout_marginStart="@dimen/film_details_margin_hor"
+            android:layout_marginEnd="@dimen/film_details_margin_hor"
+            android:layout_marginBottom="@dimen/film_details_margin_bottom"
+            app:layout_constraintTop_toBottomOf="@+id/film_details_about_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

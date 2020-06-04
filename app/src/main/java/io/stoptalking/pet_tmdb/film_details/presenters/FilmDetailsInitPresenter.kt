@@ -18,6 +18,7 @@ const val FILM_DETAILS_INIT = "FILM_DETAILS_INIT"
 
 interface FilmDetailsView : NetworkMvpView {
     fun showDetails(dto: FilmDetailsDTO)
+    fun noFilm()
 }
 
 class FilmDetailsInitPresenter(private val useCase: FilmDetailsUseCase,
@@ -41,6 +42,7 @@ class FilmDetailsInitPresenter(private val useCase: FilmDetailsUseCase,
                         .initDetails(uuid)
                         .observeOn(schedulerProvider.getUI())
                         .doOnSuccess { view?.showDetails(it) }
+                        .doOnComplete { view?.noFilm() }
                 }
         }
 }

@@ -5,4 +5,6 @@
 
     <string name="film_details_rating">%.1f %d votes</string>
 
+    <string name="film_details_no_film">There is no such a film</string>
+
 </resources>

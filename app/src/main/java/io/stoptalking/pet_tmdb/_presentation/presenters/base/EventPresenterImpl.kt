@@ -15,7 +15,6 @@ abstract class EventPresenterImpl<K : MvpView, Upstream, Downstream>(protected v
 
     protected var view : K? = null
     private lateinit var disposable : Disposable
-    @Volatile protected var working = false
 
     override fun attach(view: MvpView) {
 
@@ -38,7 +37,6 @@ abstract class EventPresenterImpl<K : MvpView, Upstream, Downstream>(protected v
             
             disposable.dispose()
             subject.onComplete()
-            working = false
         }
     }
 }

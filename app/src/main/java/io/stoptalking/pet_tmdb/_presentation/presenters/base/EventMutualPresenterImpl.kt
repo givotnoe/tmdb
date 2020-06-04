@@ -17,13 +17,8 @@ abstract class EventMutualPresenterImpl<K : MvpView, Upstream, Downstream>(reque
         get() =
             subject
                 .observeOn(schedulerProvider.getIO())
-                .filter { !working }
-                .doOnNext { working = true }
-                .concatMap {
-                    Observable
-                        .just(it)
-                        .compose(transformer)
-                        .doOnEach { working = false }
-                }
+                .take(1)
+                .compose(transformer)
+                .repeat()
 
 }

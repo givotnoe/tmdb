@@ -11,4 +11,9 @@
         <item name="android:textColor">@color/blue_light_0</item>
     </style>
 
+    <style name="FilmDetailsNoFilm">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/blue_dark_0</item>
+    </style>
+
 </resources>

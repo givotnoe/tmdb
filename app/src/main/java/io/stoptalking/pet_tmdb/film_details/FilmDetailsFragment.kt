@@ -5,6 +5,8 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.Toast
 import io.reactivex.subjects.Subject
 import io.stoptalking.pet_tmdb.R
@@ -116,6 +118,11 @@ class FilmDetailsFragment : BaseMvpFragment<BaseFragment.Listener>(),
 
     override fun showDetails(dto: FilmDetailsDTO) {
 
+        //visibility
+        film_details_sv.visibility = VISIBLE
+        film_details_no_film.visibility = GONE
+
+        //data
         imageHandler.loadCenterCropImage(dto.image, film_details_image)
 
         film_details_rating_container.setRating(dto.rating)
@@ -128,5 +135,12 @@ class FilmDetailsFragment : BaseMvpFragment<BaseFragment.Listener>(),
         film_details_rating.text = spannable
 
         film_details_about_content.text = dto.about
+    }
+
+    override fun noFilm() {
+
+        film_details_sv.visibility = GONE
+        film_details_no_film.visibility = VISIBLE
+
     }
 }

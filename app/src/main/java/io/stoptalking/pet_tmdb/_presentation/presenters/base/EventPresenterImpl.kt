@@ -20,13 +20,12 @@ abstract class EventPresenterImpl<K : MvpView, Upstream, Downstream>(protected v
 
         this.view = view as K?
 
-        disposable =
-            obs
-                .observeOn(schedulerProvider.getUI())
-                .doOnError { errorBehavior.onError(it, requestCode, view) }
-                .map { Unit }
-                .onErrorReturn { Unit }
-                .subscribe({}, {})
+        disposable = obs
+            .observeOn(schedulerProvider.getUI())
+            .doOnError { errorBehavior.onError(it, requestCode, view) }
+            .retry()
+            .subscribe({}, {}, {})
+
     }
 
     override fun detach(view: MvpView) {
